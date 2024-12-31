@@ -1,0 +1,10 @@
+/* Video Area 2 -------------------------------*/
+.video-area-1 {
+    mask-size: cover;
+    mask-position: bottom;
+    padding: 182px 0 416px;
+    background-attachment: fixed;
+    @include xs {
+        padding: 152px 0 386px;
+    }
+}

@@ -1,0 +1,23 @@
+/* Client Card -------------------------------------*/
+.client-slider1 {
+    margin: -20px 0;
+}
+.client-card {
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+    img {
+        transition: 0.4s;
+    }
+    &:hover {
+        img {
+            transform: scale(1.2);
+        }
+    }
+}
+.client-area-2 {
+    padding: 65px 0;
+    @include xs {
+        padding: 55px 0;
+    }
+}

@@ -1,0 +1,111 @@
+/* Gallery Area 1 -------------------------------*/
+.gallery-area-1 {
+    margin: 0 45px;
+    @include md {
+        margin: 0;
+    }
+    @include sm {
+        margin: 0 15px;
+    }
+}
+.gallery-wrap1 {
+    .th-video {
+        border-radius: 0;
+        img {
+            width: 100%;
+        }
+    }
+    .th-video .play-btn {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.gallery-slider1 {
+    margin: 0 -140px;
+    .swiper-slide-active {
+        .th-video {
+            border: 1px solid $theme-color;
+            border-radius: 30px;
+            .play-btn {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    .slider-arrow {
+        --pos-x: 100px;
+        --icon-size: 92px;
+        --icon-font-size: 24px;
+        background: $title-color;
+        color: $theme-color;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            border: double 1px transparent;
+            border-radius: 50px;
+            background-image: linear-gradient($title-color, $title-color),linear-gradient(to left, $theme-color2, $theme-color3 80%);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            transition: 0.4s;
+            z-index: -1;
+        }
+        &.slider-next {
+            &:before {
+                background-image: linear-gradient($title-color, $title-color),linear-gradient(to right, $theme-color2, $theme-color3 80%);
+            }
+        }
+        &:hover {
+            color: $white-color;
+        }
+    }
+}
+@include xl {
+    .gallery-slider1 .slider-arrow {
+        --pos-x: 110px;
+        --icon-size: 72px;
+    }
+}
+@include md {
+    .gallery-slider1 {
+        margin: 0 -40px;
+    }
+}
+@include sm {
+    .gallery-slider1 {
+        margin: 0;
+    }
+}
+@include xs {
+    .gallery-wrap1 {
+        .play-btn.style3 > i {
+            --icon-size: 50px;
+            --icon-font-size: 16px;
+        }
+    }
+}
+
+/* Gallery Area 2 -------------------------------*/
+.gallery-card {
+    position: relative;
+    .box-img {
+        img {
+            width: 100%;
+        }
+    }
+    .play-btn {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+    &:hover {
+        .play-btn {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,198 @@
+/* Testimonial Area ---------------------------------- */
+.testi-sec-1 {
+    padding-top: 220px;
+    @include md {
+        padding-top: 180px;
+    }
+  
+}
+/* Testimonial Grid ---------------------------------- */
+.testi-grid {
+    &-area {
+        text-align: center;
+        .testi-indicator {
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+            bottom: 157px;
+            @include vxs {
+                bottom: 145px;
+            }
+        }
+        .swiper-pagination-bullets {
+            margin: 50px 0 0px 0;
+        }
+    }
+    &-thumb {
+        max-width: 496px;
+        padding: 7px;
+        .box-img {
+            border: 1px solid transparent;
+            border-radius: 50%;
+            padding: 7px;
+            overflow: hidden;
+            transition: 0.4s ease-in-out;
+            cursor: pointer;
+        }
+        .swiper-slide-thumb-active {
+            opacity: 1;
+            .box-img {
+                transform: scale(1.15);
+                border-color: $theme-color;
+            }
+        }
+    }
+    text-align: center;
+    
+}
+.testi-card {
+    text-align: center;
+    .quote-icon {
+        margin-bottom: 20px;
+    }
+    position: relative;
+    &_profile {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+        z-index: 3;
+        gap: 20px;
+    }
+    &_avater {
+        width: 80px;
+        min-width: 80px;
+        border-radius: 15px;
+        img {
+            border-radius: inherit;
+        }
+    }
+    &_name {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: $white-color;
+        @include vxs {
+            font-size: 20px;
+        }
+    }
+    &_desig {
+        margin-bottom: 0;
+        display: block;
+        color: $theme-color;
+        font-size: 14px;
+    }
+    &_text {
+        font-size: 20px;
+        font-weight: 600;
+        font-family: $title-font;
+        margin: 20px 0 164px 0;
+        color: $white-color;
+        @include sm {
+            font-size: 18px;
+        }
+        @include xs {
+            font-size: 16px;
+            margin: 20px 0 144px 0;
+        }
+        @include vxs {
+            font-size: 14px;
+            margin: 20px 0 114px 0;
+        }
+    }
+    &_review {
+        font-size: 14px;
+        color: #FDA700;
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        margin-bottom: -0.4em;
+        i {
+            margin: 0 2px;
+        }
+    }
+}
+
+/* Testimonial Area 02---------------------------------- */
+.testi-sec-2 {
+    background-size: auto;
+    background-position: 120px 120px;
+    @include xxl {
+        background-position: -60px 120px;
+    }
+    @include xl {
+        background-position: -60px 60px;
+    }
+}
+.testi-thumb2 {
+    margin-right: -136px;
+    margin-left: 45px;
+    @media (max-width: 1700px) {
+        margin-right: 0;
+    }
+    @include xl {
+        margin-left: 0;
+    }
+    @include lg {
+        img {
+            height: 600px;
+            object-fit: cover;
+            object-position: 0;
+        }
+    }
+    @include md {
+        img {
+            height: auto;
+        }
+    }
+}
+.testi-card-2 {
+    .media {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .testi-card_review {
+        justify-content: start;
+    }
+    .testi-card_profile {
+        justify-content: start;
+    }
+    .testi-card_name {
+        font-size: 24px;
+        font-weight: 600;
+        color: $title-color;
+        margin-top: 20px;
+        margin-bottom: 6px;
+    }
+    .quote-icon {
+        img {
+            width: 90px;
+            opacity: 0.45;
+        }
+    }
+    .testi-card_text {
+        color: $body-color;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: $body-font;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+}
+.testi-card-slide {
+    .swiper-pagination-bullets {
+        text-align: left;
+        margin-top: 45px;
+    }
+}
+@include xl {
+    .testi-box-area {
+        margin-bottom: 20px;
+    }
+}
+@include xs {
+    .testi-card-2 .testi-card_name {
+        font-size: 20px;
+    }
+}
